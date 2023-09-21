@@ -12,6 +12,11 @@ var Vcs = &vcsContainer{
 	path: "assets/onprem/vcs",
 }
 
+func (c *vcsContainer) Git(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/vcs/git.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *vcsContainer) Gitea(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/vcs/gitea.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -29,10 +34,5 @@ func (c *vcsContainer) Gitlab(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *vcsContainer) Svn(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/vcs/svn.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *vcsContainer) Git(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/vcs/git.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

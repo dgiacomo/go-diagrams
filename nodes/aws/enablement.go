@@ -12,6 +12,16 @@ var Enablement = &enablementContainer{
 	path: "assets/aws/enablement",
 }
 
+func (c *enablementContainer) Iq(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/iq.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *enablementContainer) ManagedServices(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/managed-services.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *enablementContainer) ProfessionalServices(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/professional-services.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -24,15 +34,5 @@ func (c *enablementContainer) Support(opts ...diagram.NodeOption) *diagram.Node 
 
 func (c *enablementContainer) CustomerEnablement(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/customer-enablement.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *enablementContainer) Iq(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/iq.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *enablementContainer) ManagedServices(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/managed-services.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

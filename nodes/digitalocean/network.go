@@ -12,8 +12,13 @@ var Network = &networkContainer{
 	path: "assets/digitalocean/network",
 }
 
-func (c *networkContainer) FloatingIp(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/floating-ip.png")}, c.opts, opts)
+func (c *networkContainer) Domain(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/domain.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) Firewall(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/firewall.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -22,18 +27,13 @@ func (c *networkContainer) InternetGateway(opts ...diagram.NodeOption) *diagram.
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) ManagedVpn(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/managed-vpn.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *networkContainer) Vpc(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/vpc.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) LoadBalancer(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/load-balancer.png")}, c.opts, opts)
+func (c *networkContainer) ManagedVpn(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/managed-vpn.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -47,12 +47,12 @@ func (c *networkContainer) DomainRegistration(opts ...diagram.NodeOption) *diagr
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) Domain(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/domain.png")}, c.opts, opts)
+func (c *networkContainer) FloatingIp(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/floating-ip.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) Firewall(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/firewall.png")}, c.opts, opts)
+func (c *networkContainer) LoadBalancer(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/network/load-balancer.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

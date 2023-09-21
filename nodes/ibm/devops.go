@@ -17,13 +17,8 @@ func (c *devopsContainer) ContinuousDeploy(opts ...diagram.NodeOption) *diagram.
 	return diagram.NewNode(nopts...)
 }
 
-func (c *devopsContainer) ContinuousTesting(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/devops/continuous-testing.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *devopsContainer) Devops(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/devops/devops.png")}, c.opts, opts)
+func (c *devopsContainer) Provision(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/devops/provision.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -52,8 +47,13 @@ func (c *devopsContainer) ConfigurationManagement(opts ...diagram.NodeOption) *d
 	return diagram.NewNode(nopts...)
 }
 
-func (c *devopsContainer) Provision(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/devops/provision.png")}, c.opts, opts)
+func (c *devopsContainer) ContinuousTesting(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/devops/continuous-testing.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *devopsContainer) Devops(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/devops/devops.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 

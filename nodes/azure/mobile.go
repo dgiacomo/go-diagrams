@@ -13,11 +13,6 @@ var Mobile = &mobileContainer{
 }
 
 func (c *mobileContainer) AppServiceMobile(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/mobile/app-service---mobile.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *mobileContainer) AppServiceMobile(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/mobile/app-service-mobile.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

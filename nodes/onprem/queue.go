@@ -12,6 +12,11 @@ var Queue = &queueContainer{
 	path: "assets/onprem/queue",
 }
 
+func (c *queueContainer) Nats(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/queue/nats.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *queueContainer) Rabbitmq(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/queue/rabbitmq.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,10 +44,5 @@ func (c *queueContainer) Emqx(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *queueContainer) Kafka(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/queue/kafka.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *queueContainer) Nats(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/queue/nats.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

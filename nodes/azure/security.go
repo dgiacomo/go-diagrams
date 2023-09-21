@@ -12,6 +12,11 @@ var Security = &securityContainer{
 	path: "assets/azure/security",
 }
 
+func (c *securityContainer) Defender(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/security/defender.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *securityContainer) ExtendedSecurityUpdates(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/security/extended-security-updates.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,10 +44,5 @@ func (c *securityContainer) ApplicationSecurityGroups(opts ...diagram.NodeOption
 
 func (c *securityContainer) ConditionalAccess(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/security/conditional-access.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *securityContainer) Defender(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/security/defender.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

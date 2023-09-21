@@ -12,6 +12,11 @@ var Business = &businessContainer{
 	path: "assets/aws/business",
 }
 
+func (c *businessContainer) Workmail(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/business/workmail.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *businessContainer) AlexaForBusiness(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/business/alexa-for-business.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -24,10 +29,5 @@ func (c *businessContainer) BusinessApplications(opts ...diagram.NodeOption) *di
 
 func (c *businessContainer) Chime(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/business/chime.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *businessContainer) Workmail(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/business/workmail.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

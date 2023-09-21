@@ -12,11 +12,6 @@ var Controlplane = &controlplaneContainer{
 	path: "assets/k8s/controlplane",
 }
 
-func (c *controlplaneContainer) Sched(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/controlplane/sched.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *controlplaneContainer) Api(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/controlplane/api.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,5 +34,10 @@ func (c *controlplaneContainer) KProxy(opts ...diagram.NodeOption) *diagram.Node
 
 func (c *controlplaneContainer) Kubelet(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/controlplane/kubelet.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *controlplaneContainer) Sched(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/controlplane/sched.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

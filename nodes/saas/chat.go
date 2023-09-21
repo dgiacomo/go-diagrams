@@ -12,21 +12,6 @@ var Chat = &chatContainer{
 	path: "assets/saas/chat",
 }
 
-func (c *chatContainer) Mattermost(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/mattermost.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *chatContainer) Messenger(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/messenger.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *chatContainer) RocketChat(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/rocket-chat.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *chatContainer) Slack(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/slack.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -49,5 +34,20 @@ func (c *chatContainer) Discord(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *chatContainer) Line(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/line.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *chatContainer) Mattermost(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/mattermost.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *chatContainer) Messenger(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/messenger.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *chatContainer) RocketChat(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/chat/rocket-chat.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

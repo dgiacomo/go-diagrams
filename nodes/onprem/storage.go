@@ -12,16 +12,6 @@ var Storage = &storageContainer{
 	path: "assets/onprem/storage",
 }
 
-func (c *storageContainer) CephOsd(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/storage/ceph-osd.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) Ceph(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/storage/ceph.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *storageContainer) Glusterfs(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/storage/glusterfs.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -29,5 +19,15 @@ func (c *storageContainer) Glusterfs(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *storageContainer) Portworx(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/storage/portworx.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) CephOsd(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/storage/ceph-osd.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) Ceph(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/storage/ceph.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

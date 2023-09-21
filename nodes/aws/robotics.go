@@ -12,11 +12,6 @@ var Robotics = &roboticsContainer{
 	path: "assets/aws/robotics",
 }
 
-func (c *roboticsContainer) RobomakerCloudExtensionRos(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/robotics/robomaker-cloud-extension-ros.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *roboticsContainer) RobomakerDevelopmentEnvironment(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/robotics/robomaker-development-environment.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,5 +34,10 @@ func (c *roboticsContainer) Robomaker(opts ...diagram.NodeOption) *diagram.Node 
 
 func (c *roboticsContainer) Robotics(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/robotics/robotics.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *roboticsContainer) RobomakerCloudExtensionRos(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/robotics/robomaker-cloud-extension-ros.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

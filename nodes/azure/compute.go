@@ -12,33 +12,8 @@ var Compute = &computeContainer{
 	path: "assets/azure/compute",
 }
 
-func (c *computeContainer) AutomanagedVm(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/automanaged-vm.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) CloudsimpleVirtualMachines(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/cloudsimple-virtual-machines.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) Disks(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/disks.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) VmImages(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-images.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) VmScaleSet(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-scale-set.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) Vm(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm.png")}, c.opts, opts)
+func (c *computeContainer) SharedImageGalleries(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/shared-image-galleries.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -47,23 +22,18 @@ func (c *computeContainer) AppServices(opts ...diagram.NodeOption) *diagram.Node
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) DiskEncryptionSets(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/disk-encryption-sets.png")}, c.opts, opts)
+func (c *computeContainer) AvailabilitySets(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/availability-sets.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) OsImages(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/os-images.png")}, c.opts, opts)
+func (c *computeContainer) ContainerRegistries(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/container-registries.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) ServiceFabricClusters(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/service-fabric-clusters.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) SpringCloud(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/spring-cloud.png")}, c.opts, opts)
+func (c *computeContainer) DiskSnapshots(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/disk-snapshots.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -77,13 +47,8 @@ func (c *computeContainer) BatchAccounts(opts ...diagram.NodeOption) *diagram.No
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) DiskSnapshots(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/disk-snapshots.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) SapHanaOnAzure(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/sap-hana-on-azure.png")}, c.opts, opts)
+func (c *computeContainer) CitrixVirtualDesktopsEssentials(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/citrix-virtual-desktops-essentials.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -92,13 +57,28 @@ func (c *computeContainer) CloudServicesClassic(opts ...diagram.NodeOption) *dia
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) ContainerRegistries(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/container-registries.png")}, c.opts, opts)
+func (c *computeContainer) CloudsimpleVirtualMachines(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/cloudsimple-virtual-machines.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) SharedImageGalleries(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/shared-image-galleries.png")}, c.opts, opts)
+func (c *computeContainer) VmScaleSet(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-scale-set.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) OsImages(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/os-images.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) SapHanaOnAzure(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/sap-hana-on-azure.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) SpringCloud(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/spring-cloud.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -112,33 +92,8 @@ func (c *computeContainer) VmWindows(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) AvailabilitySets(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/availability-sets.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) VmClassic(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-classic.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) CitrixVirtualDesktopsEssentials(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/citrix-virtual-desktops-essentials.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) CloudServices(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/cloud-services.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) ImageVersions(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/image-versions.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) KubernetesServices(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/kubernetes-services.png")}, c.opts, opts)
+func (c *computeContainer) AutomanagedVm(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/automanaged-vm.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -152,12 +107,57 @@ func (c *computeContainer) FunctionApps(opts ...diagram.NodeOption) *diagram.Nod
 	return diagram.NewNode(nopts...)
 }
 
+func (c *computeContainer) VmClassic(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-classic.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) Vm(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) DiskEncryptionSets(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/disk-encryption-sets.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *computeContainer) ImageDefinitions(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/image-definitions.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
+func (c *computeContainer) ImageVersions(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/image-versions.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) CloudServices(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/cloud-services.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) KubernetesServices(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/kubernetes-services.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) ServiceFabricClusters(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/service-fabric-clusters.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) Disks(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/disks.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *computeContainer) MeshApplications(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/mesh-applications.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) VmImages(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-images.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

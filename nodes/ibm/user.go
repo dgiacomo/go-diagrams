@@ -12,21 +12,6 @@ var User = &userContainer{
 	path: "assets/ibm/user",
 }
 
-func (c *userContainer) Browser(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/browser.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *userContainer) Device(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/device.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *userContainer) IntegratedDigitalExperiences(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/integrated-digital-experiences.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *userContainer) PhysicalEntity(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/physical-entity.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,5 +24,20 @@ func (c *userContainer) Sensor(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *userContainer) User(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/user.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *userContainer) Browser(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/browser.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *userContainer) Device(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/device.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *userContainer) IntegratedDigitalExperiences(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/user/integrated-digital-experiences.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

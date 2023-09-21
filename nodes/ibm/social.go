@@ -12,11 +12,6 @@ var Social = &socialContainer{
 	path: "assets/ibm/social",
 }
 
-func (c *socialContainer) Messaging(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/social/messaging.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *socialContainer) Networking(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/social/networking.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -34,5 +29,10 @@ func (c *socialContainer) FileSync(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *socialContainer) LiveCollaboration(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/social/live-collaboration.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *socialContainer) Messaging(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/ibm/social/messaging.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

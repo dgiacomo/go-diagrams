@@ -12,11 +12,6 @@ var Inmemory = &inmemoryContainer{
 	path: "assets/onprem/inmemory",
 }
 
-func (c *inmemoryContainer) Hazelcast(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/inmemory/hazelcast.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *inmemoryContainer) Memcached(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/inmemory/memcached.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -29,5 +24,10 @@ func (c *inmemoryContainer) Redis(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *inmemoryContainer) Aerospike(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/inmemory/aerospike.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *inmemoryContainer) Hazelcast(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/inmemory/hazelcast.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

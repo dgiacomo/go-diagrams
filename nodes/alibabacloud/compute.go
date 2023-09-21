@@ -12,38 +12,8 @@ var Compute = &computeContainer{
 	path: "assets/alibabacloud/compute",
 }
 
-func (c *computeContainer) ContainerRegistry(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/container-registry.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) ServerLoadBalancer(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/server-load-balancer.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) ElasticComputeService(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-compute-service.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) ElasticHighPerformanceComputing(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-high-performance-computing.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) OperationOrchestrationService(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/operation-orchestration-service.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) AutoScaling(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/auto-scaling.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) ElasticContainerInstance(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-container-instance.png")}, c.opts, opts)
+func (c *computeContainer) ElasticSearch(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-search.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -57,8 +27,43 @@ func (c *computeContainer) SimpleApplicationServer(opts ...diagram.NodeOption) *
 	return diagram.NewNode(nopts...)
 }
 
+func (c *computeContainer) ContainerService(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/container-service.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) ElasticContainerInstance(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-container-instance.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) OperationOrchestrationService(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/operation-orchestration-service.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) ResourceOrchestrationService(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/resource-orchestration-service.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) ElasticHighPerformanceComputing(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-high-performance-computing.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) ServerLoadBalancer(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/server-load-balancer.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *computeContainer) WebAppService(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/web-app-service.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) AutoScaling(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/auto-scaling.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -67,22 +72,17 @@ func (c *computeContainer) BatchCompute(opts ...diagram.NodeOption) *diagram.Nod
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) ContainerService(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/container-service.png")}, c.opts, opts)
+func (c *computeContainer) ContainerRegistry(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/container-registry.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *computeContainer) ElasticSearch(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-search.png")}, c.opts, opts)
+func (c *computeContainer) ElasticComputeService(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/elastic-compute-service.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
 func (c *computeContainer) FunctionCompute(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/function-compute.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *computeContainer) ResourceOrchestrationService(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/compute/resource-orchestration-service.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

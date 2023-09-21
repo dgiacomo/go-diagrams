@@ -12,18 +12,23 @@ var Web = &webContainer{
 	path: "assets/azure/web",
 }
 
+func (c *webContainer) AppServicePlans(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-plans.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *webContainer) AppServiceCertificates(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-certificates.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *webContainer) AppServiceEnvironments(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-environments.png")}, c.opts, opts)
+func (c *webContainer) AppServiceDomains(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-domains.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *webContainer) AppServicePlans(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-plans.png")}, c.opts, opts)
+func (c *webContainer) AppServiceEnvironments(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-environments.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -44,11 +49,6 @@ func (c *webContainer) Signalr(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *webContainer) ApiConnections(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/api-connections.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *webContainer) AppServiceDomains(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/app-service-domains.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 

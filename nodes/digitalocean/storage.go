@@ -12,16 +12,6 @@ var Storage = &storageContainer{
 	path: "assets/digitalocean/storage",
 }
 
-func (c *storageContainer) VolumeSnapshot(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/storage/volume-snapshot.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) Volume(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/storage/volume.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *storageContainer) Folder(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/storage/folder.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -29,5 +19,15 @@ func (c *storageContainer) Folder(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *storageContainer) Space(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/storage/space.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) VolumeSnapshot(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/storage/volume-snapshot.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) Volume(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/digitalocean/storage/volume.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

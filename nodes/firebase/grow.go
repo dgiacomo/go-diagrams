@@ -12,6 +12,21 @@ var Grow = &growContainer{
 	path: "assets/firebase/grow",
 }
 
+func (c *growContainer) RemoteConfig(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/remote-config.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *growContainer) AbTesting(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/ab-testing.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *growContainer) AppIndexing(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/app-indexing.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *growContainer) DynamicLinks(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/dynamic-links.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -34,20 +49,5 @@ func (c *growContainer) Messaging(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *growContainer) Predictions(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/predictions.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *growContainer) RemoteConfig(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/remote-config.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *growContainer) AbTesting(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/ab-testing.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *growContainer) AppIndexing(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/firebase/grow/app-indexing.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

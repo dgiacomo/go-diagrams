@@ -12,11 +12,6 @@ var Observability = &observabilityContainer{
 	path: "assets/elastic/observability",
 }
 
-func (c *observabilityContainer) Apm(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/observability/apm.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *observabilityContainer) Logs(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/observability/logs.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -34,5 +29,10 @@ func (c *observabilityContainer) Observability(opts ...diagram.NodeOption) *diag
 
 func (c *observabilityContainer) Uptime(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/observability/uptime.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *observabilityContainer) Apm(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/observability/apm.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

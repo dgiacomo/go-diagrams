@@ -12,11 +12,6 @@ var Logging = &loggingContainer{
 	path: "assets/saas/logging",
 }
 
-func (c *loggingContainer) Datadog(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/logging/datadog.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *loggingContainer) Newrelic(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/logging/newrelic.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -24,5 +19,10 @@ func (c *loggingContainer) Newrelic(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *loggingContainer) Papertrail(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/logging/papertrail.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *loggingContainer) Datadog(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/logging/datadog.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

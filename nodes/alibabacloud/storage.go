@@ -12,6 +12,16 @@ var Storage = &storageContainer{
 	path: "assets/alibabacloud/storage",
 }
 
+func (c *storageContainer) ObjectStorageService(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/storage/object-storage-service.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) ObjectTableStore(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/storage/object-table-store.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *storageContainer) CloudStorageGateway(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/storage/cloud-storage-gateway.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,15 +49,5 @@ func (c *storageContainer) HybridCloudDisasterRecovery(opts ...diagram.NodeOptio
 
 func (c *storageContainer) Imm(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/storage/imm.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) ObjectStorageService(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/storage/object-storage-service.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) ObjectTableStore(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/alibabacloud/storage/object-table-store.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

@@ -12,6 +12,16 @@ var Devops = &devopsContainer{
 	path: "assets/azure/devops",
 }
 
+func (c *devopsContainer) ApplicationInsights(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/application-insights.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *devopsContainer) Boards(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/boards.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *devopsContainer) LabServices(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/lab-services.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -22,13 +32,8 @@ func (c *devopsContainer) Pipelines(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
-func (c *devopsContainer) Repos(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/repos.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *devopsContainer) Boards(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/boards.png")}, c.opts, opts)
+func (c *devopsContainer) Artifacts(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/artifacts.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -42,13 +47,8 @@ func (c *devopsContainer) DevtestLabs(opts ...diagram.NodeOption) *diagram.Node 
 	return diagram.NewNode(nopts...)
 }
 
-func (c *devopsContainer) ApplicationInsights(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/application-insights.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *devopsContainer) Artifacts(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/artifacts.png")}, c.opts, opts)
+func (c *devopsContainer) Repos(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/devops/repos.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
