@@ -13,6 +13,6 @@ var Nfv = &nfvContainer{
 }
 
 func (c *nfvContainer) Tacker(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/openstack/adjacentenablers/nfv/tacker.png")}, c.opts, opts)
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/openstack/nfv/tacker.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

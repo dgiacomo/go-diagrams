@@ -13,6 +13,6 @@ var Containerservices = &containerservicesContainer{
 }
 
 func (c *containerservicesContainer) Kuryr(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/openstack/adjacentenablers/containerservices/kuryr.png")}, c.opts, opts)
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/openstack/containerservices/kuryr.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

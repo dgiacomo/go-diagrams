@@ -12,6 +12,11 @@ var Game = &gameContainer{
 	path: "assets/aws/game",
 }
 
+func (c *gameContainer) GameTech(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/game/game-tech.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *gameContainer) Gamelift(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/game/gamelift.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

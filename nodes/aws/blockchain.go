@@ -21,3 +21,13 @@ func (c *blockchainContainer) QuantumLedgerDatabaseQldb(opts ...diagram.NodeOpti
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/blockchain/quantum-ledger-database-qldb.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *blockchainContainer) BlockchainResource(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/blockchain/blockchain-resource.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *blockchainContainer) Blockchain(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/blockchain/blockchain.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}

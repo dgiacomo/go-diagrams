@@ -12,11 +12,6 @@ var Os = &osContainer{
 	path: "assets/generic/os",
 }
 
-func (c *osContainer) Ubuntu(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/ubuntu.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *osContainer) Windows(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/windows.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -32,6 +27,21 @@ func (c *osContainer) Centos(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *osContainer) Debian(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/debian.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *osContainer) Suse(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/suse.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *osContainer) Ubuntu(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/ubuntu.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *osContainer) Ios(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/ios.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -42,7 +52,12 @@ func (c *osContainer) LinuxGeneral(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
-func (c *osContainer) Suse(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/suse.png")}, c.opts, opts)
+func (c *osContainer) Raspbian(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/raspbian.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *osContainer) RedHat(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/red-hat.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

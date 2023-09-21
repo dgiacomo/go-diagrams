@@ -12,6 +12,11 @@ var Api = &apiContainer{
 	path: "assets/gcp/api",
 }
 
+func (c *apiContainer) ApiGateway(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/api/api-gateway.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *apiContainer) Endpoints(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/api/endpoints.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

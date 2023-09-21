@@ -12,6 +12,11 @@ var Ecosystem = &ecosystemContainer{
 	path: "assets/k8s/ecosystem",
 }
 
+func (c *ecosystemContainer) ExternalDns(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/external-dns.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *ecosystemContainer) Helm(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/helm.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

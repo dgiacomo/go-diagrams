@@ -12,6 +12,11 @@ var Analytics = &analyticsContainer{
 	path: "assets/saas/analytics",
 }
 
+func (c *analyticsContainer) Dataform(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/analytics/dataform.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *analyticsContainer) Snowflake(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/analytics/snowflake.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

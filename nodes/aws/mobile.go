@@ -12,11 +12,6 @@ var Mobile = &mobileContainer{
 	path: "assets/aws/mobile",
 }
 
-func (c *mobileContainer) Amplify(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/mobile/amplify.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *mobileContainer) ApiGatewayEndpoint(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/mobile/api-gateway-endpoint.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -37,7 +32,17 @@ func (c *mobileContainer) DeviceFarm(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *mobileContainer) Mobile(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/mobile/mobile.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *mobileContainer) Pinpoint(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/mobile/pinpoint.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *mobileContainer) Amplify(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/mobile/amplify.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

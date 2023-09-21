@@ -26,3 +26,8 @@ func (c *securityContainer) Siem(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/security/siem.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *securityContainer) Xdr(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/security/xdr.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}

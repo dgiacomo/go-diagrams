@@ -16,3 +16,8 @@ func (c *satelliteContainer) GroundStation(opts ...diagram.NodeOption) *diagram.
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/satellite/ground-station.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *satelliteContainer) Satellite(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/satellite/satellite.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}

@@ -17,6 +17,11 @@ func (c *businessContainer) AlexaForBusiness(opts ...diagram.NodeOption) *diagra
 	return diagram.NewNode(nopts...)
 }
 
+func (c *businessContainer) BusinessApplications(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/business/business-applications.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *businessContainer) Chime(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/business/chime.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

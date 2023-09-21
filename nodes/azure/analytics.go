@@ -17,38 +17,8 @@ func (c *analyticsContainer) AnalysisServices(opts ...diagram.NodeOption) *diagr
 	return diagram.NewNode(nopts...)
 }
 
-func (c *analyticsContainer) DataLakeAnalytics(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-lake-analytics.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *analyticsContainer) Hdinsightclusters(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/hdinsightclusters.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *analyticsContainer) LogAnalyticsWorkspaces(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/log-analytics-workspaces.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *analyticsContainer) StreamAnalyticsJobs(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/stream-analytics-jobs.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *analyticsContainer) DataExplorerClusters(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-explorer-clusters.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *analyticsContainer) DataFactories(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-factories.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *analyticsContainer) DataLakeStoreGen1(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-lake-store-gen1.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -64,5 +34,40 @@ func (c *analyticsContainer) EventHubClusters(opts ...diagram.NodeOption) *diagr
 
 func (c *analyticsContainer) EventHubs(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/event-hubs.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) LogAnalyticsWorkspaces(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/log-analytics-workspaces.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) DataFactories(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-factories.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) DataLakeAnalytics(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-lake-analytics.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) DataLakeStoreGen1(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/data-lake-store-gen1.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) Hdinsightclusters(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/hdinsightclusters.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) StreamAnalyticsJobs(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/stream-analytics-jobs.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *analyticsContainer) SynapseAnalytics(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/synapse-analytics.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

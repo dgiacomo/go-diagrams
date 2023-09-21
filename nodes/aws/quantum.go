@@ -16,3 +16,8 @@ func (c *quantumContainer) Braket(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/quantum/braket.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *quantumContainer) QuantumTechnologies(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/quantum/quantum-technologies.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}

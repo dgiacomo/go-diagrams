@@ -12,6 +12,16 @@ var Monitoring = &monitoringContainer{
 	path: "assets/apps/monitoring",
 }
 
+func (c *monitoringContainer) Sentry(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/monitoring/sentry.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *monitoringContainer) Splunk(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/monitoring/splunk.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *monitoringContainer) Thanos(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/monitoring/thanos.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -34,15 +44,5 @@ func (c *monitoringContainer) PrometheusOperator(opts ...diagram.NodeOption) *di
 
 func (c *monitoringContainer) Prometheus(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/monitoring/prometheus.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *monitoringContainer) Sentry(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/monitoring/sentry.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *monitoringContainer) Splunk(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/monitoring/splunk.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

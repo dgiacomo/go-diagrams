@@ -12,13 +12,48 @@ var Storage = &storageContainer{
 	path: "assets/aws/storage",
 }
 
+func (c *storageContainer) EfsInfrequentaccessPrimaryBg(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/efs-infrequentaccess-primary-bg.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) SimpleStorageServiceS3(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/simple-storage-service-s3.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) Snowball(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snowball.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) StorageGatewayCachedVolume(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage-gateway-cached-volume.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) Storage(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) ElasticBlockStoreEbsSnapshot(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/elastic-block-store-ebs-snapshot.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) SimpleStorageServiceS3BucketWithObjects(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/simple-storage-service-s3-bucket-with-objects.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *storageContainer) CloudendureDisasterRecovery(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/cloudendure-disaster-recovery.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) FsxForLustre(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/fsx-for-lustre.png")}, c.opts, opts)
+func (c *storageContainer) EfsStandardPrimaryBg(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/efs-standard-primary-bg.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -32,43 +67,28 @@ func (c *storageContainer) Backup(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) SimpleStorageServiceS3(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/simple-storage-service-s3.png")}, c.opts, opts)
+func (c *storageContainer) S3GlacierArchive(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/s3-glacier-archive.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) Snowmobile(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snowmobile.png")}, c.opts, opts)
+func (c *storageContainer) S3GlacierVault(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/s3-glacier-vault.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) EfsInfrequentaccessPrimaryBg(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/efs-infrequentaccess-primary-bg.png")}, c.opts, opts)
+func (c *storageContainer) SnowFamilySnowballImportExport(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snow-family-snowball-import-export.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) FsxForWindowsFileServer(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/fsx-for-windows-file-server.png")}, c.opts, opts)
+func (c *storageContainer) StorageGatewayNonCachedVolume(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage-gateway-non-cached-volume.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) SnowballEdge(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snowball-edge.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) StorageGateway(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage-gateway.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) Storage(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *storageContainer) EfsStandardPrimaryBg(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/efs-standard-primary-bg.png")}, c.opts, opts)
+func (c *storageContainer) StorageGatewayVirtualTapeLibrary(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage-gateway-virtual-tape-library.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -77,8 +97,8 @@ func (c *storageContainer) ElasticBlockStoreEbs(opts ...diagram.NodeOption) *dia
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) ElasticFileSystemEfs(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/elastic-file-system-efs.png")}, c.opts, opts)
+func (c *storageContainer) FsxForWindowsFileServer(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/fsx-for-windows-file-server.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -87,7 +107,52 @@ func (c *storageContainer) S3Glacier(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
-func (c *storageContainer) Snowball(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snowball.png")}, c.opts, opts)
+func (c *storageContainer) SimpleStorageServiceS3Object(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/simple-storage-service-s3-object.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) SnowballEdge(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snowball-edge.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) Snowmobile(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/snowmobile.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) ElasticFileSystemEfsFileSystem(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/elastic-file-system-efs-file-system.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) FsxForLustre(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/fsx-for-lustre.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) StorageGateway(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/storage-gateway.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) ElasticBlockStoreEbsVolume(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/elastic-block-store-ebs-volume.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) ElasticFileSystemEfs(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/elastic-file-system-efs.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) MultipleVolumesResource(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/multiple-volumes-resource.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *storageContainer) SimpleStorageServiceS3Bucket(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/storage/simple-storage-service-s3-bucket.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

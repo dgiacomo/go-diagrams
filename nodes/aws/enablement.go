@@ -22,6 +22,11 @@ func (c *enablementContainer) Support(opts ...diagram.NodeOption) *diagram.Node 
 	return diagram.NewNode(nopts...)
 }
 
+func (c *enablementContainer) CustomerEnablement(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/customer-enablement.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *enablementContainer) Iq(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/enablement/iq.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

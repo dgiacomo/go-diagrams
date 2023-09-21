@@ -12,6 +12,11 @@ var Ar = &arContainer{
 	path: "assets/aws/ar",
 }
 
+func (c *arContainer) ArVr(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/ar/ar-vr.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *arContainer) Sumerian(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/ar/sumerian.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

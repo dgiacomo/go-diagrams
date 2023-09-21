@@ -16,3 +16,13 @@ func (c *cdnContainer) Cloudflare(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/cdn/cloudflare.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *cdnContainer) Fastly(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/cdn/fastly.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *cdnContainer) Akamai(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/cdn/akamai.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}

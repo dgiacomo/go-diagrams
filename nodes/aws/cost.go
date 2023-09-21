@@ -12,6 +12,11 @@ var Cost = &costContainer{
 	path: "assets/aws/cost",
 }
 
+func (c *costContainer) Budgets(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/cost/budgets.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *costContainer) CostAndUsageReport(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/cost/cost-and-usage-report.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -22,6 +27,11 @@ func (c *costContainer) CostExplorer(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *costContainer) CostManagement(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/cost/cost-management.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *costContainer) ReservedInstanceReporting(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/cost/reserved-instance-reporting.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -29,10 +39,5 @@ func (c *costContainer) ReservedInstanceReporting(opts ...diagram.NodeOption) *d
 
 func (c *costContainer) SavingsPlans(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/cost/savings-plans.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *costContainer) Budgets(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/aws/cost/budgets.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

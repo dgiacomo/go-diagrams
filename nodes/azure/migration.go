@@ -12,6 +12,16 @@ var Migration = &migrationContainer{
 	path: "assets/azure/migration",
 }
 
+func (c *migrationContainer) DataBoxEdge(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/migration/data-box-edge.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *migrationContainer) DataBox(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/migration/data-box.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *migrationContainer) DatabaseMigrationServices(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/migration/database-migration-services.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)

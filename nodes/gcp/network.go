@@ -12,38 +12,13 @@ var Network = &networkContainer{
 	path: "assets/gcp/network",
 }
 
-func (c *networkContainer) LoadBalancing(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/load-balancing.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *networkContainer) TrafficDirector(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/traffic-director.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *networkContainer) Vpn(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/vpn.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *networkContainer) Cdn(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/cdn.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) DedicatedInterconnect(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/dedicated-interconnect.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *networkContainer) Dns(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/dns.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *networkContainer) Nat(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/nat.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -57,8 +32,23 @@ func (c *networkContainer) PartnerInterconnect(opts ...diagram.NodeOption) *diag
 	return diagram.NewNode(nopts...)
 }
 
+func (c *networkContainer) PremiumNetworkTier(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/premium-network-tier.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *networkContainer) Router(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/router.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) DedicatedInterconnect(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/dedicated-interconnect.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) LoadBalancing(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/load-balancing.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -67,13 +57,18 @@ func (c *networkContainer) StandardNetworkTier(opts ...diagram.NodeOption) *diag
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) Armor(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/armor.png")}, c.opts, opts)
+func (c *networkContainer) TrafficDirector(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/traffic-director.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) ExternalIpAddresses(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/external-ip-addresses.png")}, c.opts, opts)
+func (c *networkContainer) Vpn(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/vpn.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) Armor(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/armor.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -82,8 +77,8 @@ func (c *networkContainer) FirewallRules(opts ...diagram.NodeOption) *diagram.No
 	return diagram.NewNode(nopts...)
 }
 
-func (c *networkContainer) PremiumNetworkTier(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/premium-network-tier.png")}, c.opts, opts)
+func (c *networkContainer) Nat(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/nat.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
@@ -94,5 +89,10 @@ func (c *networkContainer) Routes(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *networkContainer) VirtualPrivateCloud(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/virtual-private-cloud.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) ExternalIpAddresses(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/gcp/network/external-ip-addresses.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

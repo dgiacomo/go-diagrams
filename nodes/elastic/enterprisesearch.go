@@ -12,16 +12,6 @@ var Enterprisesearch = &enterprisesearchContainer{
 	path: "assets/elastic/enterprisesearch",
 }
 
-func (c *enterprisesearchContainer) AppSearch(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/app-search.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *enterprisesearchContainer) EnterpriseSearch(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/enterprise-search.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
 func (c *enterprisesearchContainer) SiteSearch(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/site-search.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -29,5 +19,20 @@ func (c *enterprisesearchContainer) SiteSearch(opts ...diagram.NodeOption) *diag
 
 func (c *enterprisesearchContainer) WorkplaceSearch(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/workplace-search.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *enterprisesearchContainer) AppSearch(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/app-search.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *enterprisesearchContainer) Crawler(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/crawler.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *enterprisesearchContainer) EnterpriseSearch(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/elastic/enterprisesearch/enterprise-search.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }

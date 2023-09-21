@@ -12,6 +12,11 @@ var Rbac = &rbacContainer{
 	path: "assets/k8s/rbac",
 }
 
+func (c *rbacContainer) Rb(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/rbac/rb.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *rbacContainer) Role(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/rbac/role.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -39,10 +44,5 @@ func (c *rbacContainer) Crb(opts ...diagram.NodeOption) *diagram.Node {
 
 func (c *rbacContainer) Group(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/rbac/group.png")}, c.opts, opts)
-	return diagram.NewNode(nopts...)
-}
-
-func (c *rbacContainer) Rb(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/rbac/rb.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
