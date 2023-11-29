@@ -1,4 +1,4 @@
-module github.com/blushft/go-diagrams
+module github.com/dgiacomo/go-diagrams
 
 go 1.20
 
