@@ -150,6 +150,11 @@ func (g *Group) BackgroundColor(c string) *Group {
 	return g
 }
 
+func (g *Group) Direction(d DiagramDirection) *Group {
+	g.options.Direction = string(d)
+	return g
+}
+
 func (g *Group) render(outdir string, graph *graphviz.Escape) error {
 	if err := graph.AddSubGraph(g.parent.id, g.id, g.attrs()); err != nil {
 		return err
