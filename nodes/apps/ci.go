@@ -17,6 +17,11 @@ func (c *ciContainer) Bitbucket(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *ciContainer) Buildkite(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/ci/buildkite.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *ciContainer) Droneci(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/ci/droneci.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
