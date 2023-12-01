@@ -31,3 +31,8 @@ func (c *ecosystemContainer) Krew(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/krew.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *ecosystemContainer) Styri(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/styri.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
