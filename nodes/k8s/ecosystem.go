@@ -12,6 +12,11 @@ var Ecosystem = &ecosystemContainer{
 	path: "assets/k8s/ecosystem",
 }
 
+func (c *ecosystemContainer) ClusterAPI(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/kubernetes_cluster_api.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *ecosystemContainer) Kustomize(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/kustomize.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
