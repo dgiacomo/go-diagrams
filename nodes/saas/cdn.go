@@ -26,3 +26,8 @@ func (c *cdnContainer) Fastly(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/cdn/fastly.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *cdnContainer) NS1(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/saas/cdn/ns1.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
