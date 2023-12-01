@@ -12,6 +12,11 @@ var Ci = &ciContainer{
 	path: "assets/apps/ci",
 }
 
+func (c *ciContainer) Bazel(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/ci/bazel.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *ciContainer) Bitbucket(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/ci/bitbucket.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
