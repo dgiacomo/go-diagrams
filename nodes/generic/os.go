@@ -37,6 +37,11 @@ func (c *osContainer) Debian(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *osContainer) FedoraCoreOS(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/fedora-coreos.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *osContainer) Raspbian(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/generic/os/raspbian.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
