@@ -126,3 +126,9 @@ func Bidirectional() EdgeOption {
 		o.Reverse = true
 	}
 }
+
+func Invisible() EdgeOption {
+	return func(o *EdgeOptions) {
+		o.Style = "invis"
+	}
+}
