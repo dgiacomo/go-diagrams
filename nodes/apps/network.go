@@ -92,6 +92,11 @@ func (c *networkContainer) Caddy(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *networkContainer) Cilium(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/network/cilium.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *networkContainer) Consul(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/network/consul.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
