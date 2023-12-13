@@ -26,3 +26,8 @@ func (c *cdContainer) Spinnaker(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/cd/spinnaker.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *cdContainer) Kayenta(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/apps/cd/kayenta.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
