@@ -17,6 +17,16 @@ func (c *gitopsContainer) Argocd(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *gitopsContainer) Argoevents(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/gitops/argo-events.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *gitopsContainer) Argorollouts(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/gitops/argo-rollouts.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *gitopsContainer) Flagger(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/onprem/gitops/flagger.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
