@@ -83,3 +83,6 @@ Create an ouput image with any graphviz compatible renderer:
 ```sh
 dot -Tpng diagram.dot > diagram.png
 ```
+
+## Adding images
+[TLDR.md/Adding Images](TLDR.md#adding-images)
