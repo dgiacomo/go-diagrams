@@ -37,6 +37,11 @@ func (c *ecosystemContainer) Krew(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *ecosystemContainer) Kubechecks(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/kubechecks.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *ecosystemContainer) Kubeconform(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/k8s/ecosystem/kubeconform.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
